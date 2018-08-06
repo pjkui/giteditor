@@ -28,7 +28,7 @@ $> gulp dev
 
 # 2. run with electron
 $> cd PATH-TO-LEANOTE-DESKTOP-APP
-$> electron .
+$> npm run start
 ```
 
 ## Docs
