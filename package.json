@@ -1,7 +1,11 @@
 {
-  "name": "Leanote",
-  "version": "0.7",
+  "name": "giteditor",
+  "version": "1.0.1",
   "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/pjkui/giteditor.git",
   "devDependencies": {
     "electron": "^2.0.6"
   }
