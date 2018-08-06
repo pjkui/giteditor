@@ -7,6 +7,10 @@
   },
   "repository": "https://github.com/pjkui/giteditor.git",
   "devDependencies": {
-    "electron": "^2.0.6"
+    "adm-zip": "^0.4.11",
+    "async": "^2.6.1",
+    "electron": "^2.0.6",
+    "nedb": "^1.8.0",
+    "needle": "^2.2.1"
   }
 }

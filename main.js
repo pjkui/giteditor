@@ -4,7 +4,7 @@ var ipc = require('electron').ipcMain;
 const electron = require('electron');
 const Menu = electron.Menu
 const Tray = electron.Tray
-var pdfMain = require('pdf_main');
+var pdfMain = require('./api/pdf_main');
 var appIcon;
 
 // Report crashes to our server.
@@ -74,7 +74,7 @@ app.on('activate', function() {
 var DB = {
   init: function () {
     var me = this;
-    var db = require('db_main');
+    var db = require('./api/db_main');
 
     // 前端发来消息
     // m = {token: token, method: 'insert, findOne', dbname: 'notes', params: {username: "life"}};
@@ -173,7 +173,7 @@ function openIt() {
   DB.init();
 
   // 协议
-  var leanoteProtocol = require('leanote_protocol');
+  var leanoteProtocol = require('./api/leanote_protocol');
   leanoteProtocol.init();
 
   // Create the browser window.
