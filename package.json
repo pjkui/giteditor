@@ -1,13 +1,7 @@
 {
-  "name": "giteditor",
-  "version": "1.0.0",
-  "description": "git editor",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "name": "Leanote",
+  "version": "0.7",
+  "main": "main.js",
   "devDependencies": {
     "electron": "^2.0.6"
   }

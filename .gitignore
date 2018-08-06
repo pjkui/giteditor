@@ -71,3 +71,29 @@ typings/
 
 # Serverless directories
 .serverless
+.DS_Store
+.settings
+.project
+.bin
+
+config.codekit
+.codekit-cache
+*.codekit
+min
+
+/dist
+/nw
+/atom
+/gulpfile.js
+/gulpfile_atom.js
+sqlite*
+tinymce_old
+node_modules/
+node_modules/request
+node_modules/fs.extra
+/updates
+/old
+
+/public/themes/**/*.css
+/public/css/**/*.css
+/dev/node_modules
