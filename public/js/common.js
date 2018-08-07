@@ -347,7 +347,8 @@ function switchEditor(isMarkdown) {
 // 将http://127.0.0.1:8912转为leanote://
 function fixContentUrl(content) {
 	if (EvtService.canUseProtocol()) {
-		return content.replace(/http:\/\/127.0.0.1:8912\/api\//g, 'leanote://');
+		return content.replace(/(http[s]?|ftp):\/\/[^\/\.]+?\..+\w\/api\//g, 'leanote://');
+		// return content.replace(/http:\/\/127.0.0.1:8912\/api\//g, 'leanote://');
 	}
 	return content;
 }

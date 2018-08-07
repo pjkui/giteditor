@@ -2,6 +2,9 @@
   "name": "leanote-desktop-app-dev-package",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "start": "gulp dev"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.3.2",
