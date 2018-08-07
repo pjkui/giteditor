@@ -212,7 +212,7 @@ function openIt() {
     var win2 = new BrowserWindow(arg);
     win2.loadURL('file://' + __dirname + '/' + html);
     mainWindow = win2;
-
+    win2.webContents.openDevTools()
     // remove all events then close it
     removeEvents(everWindow);
     everWindow.close();
