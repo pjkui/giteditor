@@ -1,11 +1,11 @@
 // 服务测试
 
-var Notebook = require('notebook');
-var Note = require('note');
-var Api = require('api');
-var User = require('user');
-var Evt = require('evt');
-var Common = require('common');
+var Notebook = require('./api/notebook');
+var Note = require('./api/note');
+var Api = require('./api/api');
+var User = require('./api/user');
+var Evt = require('./api/evt');
+var Common = require('./api/common');
 
 /*
 Notebook.addNotebook("1", "life");

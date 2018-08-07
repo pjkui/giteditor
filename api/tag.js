@@ -23,7 +23,7 @@ var Tag = {
 		db.tags.findOne({UserId: userId, Tag: title}, function(err, tag) {
 			// 存在, 则更新该tag下的笔记数量
 			// 已存的, 不更新IsDirty
-			var Note = require('note');
+			var Note = require('./note');
 			if(!err && tag) {
 				// Note.countNoteByTag(title, function(cnt) {
 					// tag.Count = cnt;

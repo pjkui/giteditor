@@ -638,7 +638,7 @@ var Note = {
 			return;
 		}
 		if (!Api) {
-			Api = require('api');
+			Api = require('./api');
 		}
 		Api.getNoteContent(serverNoteId, function(noteContent) {
 			// 同步到本地
@@ -684,7 +684,7 @@ var Note = {
 					console.log('need load from server');
 
 					if(!Api) {
-						Api = require('api')
+						Api = require('./api')
 					}
 
 					var serverNoteId = note.ServerNoteId;
@@ -1265,7 +1265,7 @@ var Note = {
 		// 这里为什么要同步? 因为fixConflicts后要进行send changes, 这些有冲突的不能发送changes
 		conflictNotes || (conflictNotes = []);
 		if(!Api) {
-			Api = require('api')
+			Api = require('./api')
 		}
 		async.eachSeries(conflictNotes, function(serverAndLocalNote, cb) {
 			// var noteId = note.NoteId; // 本地noteId
@@ -1349,7 +1349,7 @@ var Note = {
 						// 更新之前的, 要先从服务器上得到服务版的
 						// 这里的note是本地的, 所以将服务器上的覆盖它
 						if(!Api) {
-							Api = require('api');
+							Api = require('./api');
 						}
 						Api.getNote(note.ServerNoteId, function(serverNote) {
 							serverNote.ServerNoteId = serverNote.NoteId;
@@ -1736,7 +1736,7 @@ var Note = {
 			// return;
 		}
 		if(!Api) {
-			Api = require('api');
+			Api = require('./api');
 		}
 
 		me.inDownload[serverFileId] = true;
@@ -1800,7 +1800,7 @@ var Note = {
 		}
 		var tagUpdate = {}; // 
 		if(!Tag) {
-			Tag = require('tag');
+			Tag = require('./tag');
 		}
 
 		var userId = User.getCurActiveUserId();
@@ -1864,7 +1864,7 @@ var Note = {
 				callback({Ok: false, Msg: 'noteNotExists'});
 			} else {
 				if (!Api) {
-					Api = require('api');
+					Api = require('./api');
 				}
 				Api.exportPdf(serverNoteId, callback); 
 			}

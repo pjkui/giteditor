@@ -44,7 +44,7 @@ User = {
 			return u(callback);
 		}
 		if(!Api) {
-			Api = require('api');
+			Api = require('./api');
 		}
 		Api.logout(function() {
 			u(callback);
@@ -86,7 +86,7 @@ User = {
 			// 本地用户没有, 则远程验证
 			else {
 				if(!Api) {
-					Api = require('api');
+					Api = require('./api');
 				}
 				// 远程验证
 				Api.auth(username, password, host, function(ret) {
@@ -125,12 +125,12 @@ User = {
 							db.initDBForUser(user.UserId, user);
 
 							me.userId = user.UserId;
-							var Notebook = require('notebook');
+							var Notebook = require('./notebook');
 							var notebookId = Common.objectId();
 							Notebook.addNotebook(notebookId, 'Leanote', '', function (notebook) {
 								if (notebook) {
-									var Note = require('note');
-									var Tag = require('tag');
+									var Note = require('./note');
+									var Tag = require('./tag');
 									Tag.addOrUpdateTag('Leanote');
 									Tag.addOrUpdateTag('Welcome');
 									Note.updateNoteOrContent({
@@ -456,7 +456,7 @@ User = {
 	updateLastSyncState: function(callback) {
 		var me = this;
 		if(!Api) {
-			Api = require('api');
+			Api = require('./api');
 		}
 		Api.getLastSyncState(function(state) {
 			if(state) {
@@ -714,7 +714,7 @@ User = {
 	updateAllBeLocal: function (email, password, host) {
 		var me = this;
 		if(!Api) {
-			Api = require('api');
+			Api = require('./api');
 		}
 		Api.auth(email, password, host, function(user) {
 			if(user.Ok) {

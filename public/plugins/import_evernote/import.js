@@ -1,12 +1,12 @@
+var async = require('async');
 var xml2js = require('xml2js');
 var fs = require('fs');
-var Evt = require('evt');
-var File = require('file');
-var Note = require('note');
-var Web = require('web');
-var Tag = require('tag');
-var async = require('async');
-var Common = require('common');
+var Evt = require('./api/evt');
+var File = require('./api/file');
+var Note = require('./api/note');
+var Web = require('./api/web');
+var Tag = require('./api/tag');
+var Common = require('./api/common');
 
 var Import = {
 

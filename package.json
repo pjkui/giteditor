@@ -11,6 +11,7 @@
     "async": "^2.6.1",
     "electron": "^2.0.6",
     "nedb": "^1.8.0",
-    "needle": "^2.2.1"
+    "needle": "^2.2.1",
+    "resanitize": "^0.3.0"
   }
 }
