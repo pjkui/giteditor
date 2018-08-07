@@ -1,5 +1,5 @@
+var async = require('async');
 var db = require('./db');
-var async = require('./async');
 var User = require('./user');
 var Note = require('./note');
 var Tag = require('./tag');

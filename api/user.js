@@ -1,6 +1,6 @@
 var Evt = require('./evt');
 var db = require('./db');
-var fs = require('./fs');
+var fs = require('fs');
 var Common = require('./common');
 var async;
 

@@ -2,7 +2,7 @@
  * db_main的db client, 调用db client即会调用后端的db_main
  */
 
-var DatastoreProxy = require('nedb_proxy');
+var DatastoreProxy = require('./nedb_proxy');
 var path = require('path');
 var Evt = require('./evt');
 var ipc = require('electron').ipcRenderer;

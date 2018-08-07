@@ -1,5 +1,5 @@
 var db = require('./db');
-var async = require('./async');
+var async = require('async');
 var User = require('./user');
 // var db.notebooks = db.notebooks;
 var Common = require('./common');
