@@ -569,6 +569,10 @@ var Note = {
 		}
 		// https, http都行
 		var url = Evt.leanoteUrl.replace('https', 'https*');
+		// var url = Evt.leanoteUrl.replace('https', 'https*');
+		url = url.replace('https://','');
+		url = url.replace('http://','');
+		url = '(http://|https://)?' + url;
 
 		// http://leanote.com/file/outputImage?fileId=54f9079f38f4115c0200001b
 		var reg0 = new RegExp(url + '/file/outputImage', 'g');
